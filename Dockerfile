@@ -4,4 +4,4 @@ RUN apk add --no-cache --update bash ca-certificates curl git jq openssh
 
 COPY src /src
 
-RUN /src/entrypoint.sh
+ENTRYPOINT /src/entrypoint.sh
