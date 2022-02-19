@@ -1,0 +1,23 @@
+name: gha custom action docker demo
+description: demo gha docker container action
+author: puglao
+
+inputs:
+  echoMessage:
+    description: 'Message to print in container'
+    required: false
+    default: "World"
+    
+outputs:
+  runHex:
+    description: 'random hex to output'
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+  - ${{ inputs.echoMessage }}
+
+branding:
+  icon: 'upload-cloud'
+  color: 'white'
