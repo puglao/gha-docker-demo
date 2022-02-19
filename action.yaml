@@ -15,8 +15,6 @@ outputs:
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  env:
-    echoMessage: ${{ inputs.echoMessage }}
 
 branding:
   icon: 'upload-cloud'

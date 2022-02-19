@@ -1,6 +1,6 @@
 #!/bin/bash
 
 set -x
-echo "Hello, "${echoMessage}"!"
-hash="$(base64 <<<"${echoMessage}")"
+echo "Hello, "${INPUT_ECHOMESSAGE}"!"
+hash="$(base64 <<<"${INPUT_ECHOMESSAGE}")"
 echo "::set-output name=runHex::"${hash}""
